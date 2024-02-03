@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Output Input on Page</title>
+</head>
+<body>
+
+  <input type="text" id="myInput" placeholder="Type something...">
+  <button id="outputButton">Output Input</button>
+  <div id="outputContainer"></div>
+
+  <script>
+    // Function to handle button click
+    function outputInput() {
+      var inputValue = document.getElementById('myInput').value;
+      var outputContainer = document.getElementById('outputContainer');
+      
+      // Check if the input is empty
+      if (inputValue === "") {
+        outputContainer.textContent = 'Empty Input! Please type something.';
+      } else {
+        outputContainer.textContent = 'Input Value: ' + inputValue;
+      }
+    }
+
+    // Attach event listener to the button
+    document.getElementById('outputButton').addEventListener('click', outputInput);
+  </script>
+
+</body>
+</html>
